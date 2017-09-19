@@ -21,6 +21,7 @@ public class ArrowGenerator : MonoBehaviour {
 			GameObject go = Instantiate (arrowPrefab) as GameObject;
 			int px = Random.Range (-6, 7);
 			go.transform.position = new Vector3 (px, 7, 0);
+			Debug.Log ("test");
 		}
 	}
 }
