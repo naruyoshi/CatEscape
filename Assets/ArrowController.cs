@@ -32,6 +32,10 @@ public class ArrowController : MonoBehaviour {
 		if (d < r1 + r2) {
 			// 衝突した場合は矢を消す
 			Destroy (gameObject);
+
+			// GameDirectorスクリプトを取得しHPUIの減少処理を行う
+			GameObject director = GameObject.Find ("GameDirector");
+			director.GetComponent<GameDirector> ().DecreaseHp ();
 		}
 	}
 }
